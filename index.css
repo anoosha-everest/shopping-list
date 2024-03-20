@@ -95,3 +95,14 @@ body {
 .hide{
   cursor:pointer;
 }
+
+@media only screen and (max-width: 600px) {
+  #countOutput{
+    display:flex;
+    flex-direction: column;
+    width:30%;
+    /* justify-content: center; */
+    margin-left:35%;
+  }
+}
+
