@@ -129,4 +129,32 @@ function updateCounts() {
       document.getElementById('marked-Count').textContent = markedCount;
       document.getElementById('unmarked-Count').textContent = unmarkedCount;
   }
+var hid=false;
 
+var hide=document.getElementById('hide');
+  hide.addEventListener("click",function(){
+    hid?showItems():hideItems();
+  });
+function hideItems(){
+
+        const shoppingList = document.getElementById('list-item').getElementsByTagName('li');
+        hide.innerHTML="<b>show all items</b>";
+        for (let i = 0; i < shoppingList.length; i++) {
+          if (shoppingList[i].classList.contains('marked')) {
+            shoppingList[i].style.display="none";
+          } else {
+            shoppingList[i].style.display="block";
+          }
+      }
+      hid=true;
+}
+function showItems(){
+        const shoppingList = document.getElementById('list-item').getElementsByTagName('li');
+        hide.innerHTML="<b>Hide marked</b>";
+        for (let i = 0; i < shoppingList.length; i++) {
+          
+            shoppingList[i].style.display="block";
+          
+      }
+      hid=false;
+}

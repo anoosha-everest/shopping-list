@@ -1,6 +1,7 @@
 h1{
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
+  text-shadow:2px 2px 5px lightcoral;
 }
 .list-item{
     border:none;
@@ -11,7 +12,7 @@ h1{
     box-sizing: border-box;
   }
   input{
-    background-color: #f6f6f6;
+    background-color: #f6f6f6;;
     width:80%;
     padding: 20px;
     border-radius: 5px;
@@ -19,7 +20,8 @@ h1{
    border: 2px solid black;
   }
   input:hover{
-    background-color: #eee;
+    background-color: #f6f6f6;;
+    box-shadow:10px 10px 10px grey;
   }
   ul {
     list-style-type: none;
@@ -30,14 +32,14 @@ h1{
   ul li {
     border: 1px solid #ddd;
     margin-top: -1px; 
-    background-color: #f6f6f6;
+    background-color: lightgrey;
     padding: 12px;
     text-decoration: none;
     font-size: 18px;
     color: black;
     display: block;
     position: relative;
-    margin-top: 5px;
+    margin-top: 8px;
     border-radius: 5px;
     width:80%;
     margin-left: 10%;
@@ -55,7 +57,7 @@ h1{
     transform: translate(0%, -50%);
   }
   #hello{
-    background-color: #f6f6f6;
+    background-color: #f6f6f6;;
   } 
   
   
@@ -87,5 +89,9 @@ p{
 
 
 body {
-  background: linear-gradient(to right, #A9F1DF , #FFBBBB);
+  height:100%;
+  background: linear-gradient(to right,#2980b9, #6dd5fa,#ffffff);
+}
+.hide{
+  cursor:pointer;
 }
