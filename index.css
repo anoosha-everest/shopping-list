@@ -100,9 +100,9 @@ body {
   #countOutput{
     display:flex;
     flex-direction: column;
-    width:30%;
+    width:40%;
     /* justify-content: center; */
-    margin-left:35%;
+    margin-left:30%;
   }
 }
 
