@@ -49,8 +49,11 @@ inputElement.addEventListener('keydown', function(event) {
        if(inp.length==0){alert("Arey yaar..."  +"\n"+"Enter an item first😉");}
        else{
         var flag=false;
+        var inp1=inp.toLowerCase();
        for(let i=0;i<items.length;i++){
-        if(items[i].item==inp && items[i].del_status==false){
+        var inp2=items[i].item;
+        inp2=inp2.toLowerCase();
+        if(inp2==inp1 && items[i].del_status==false){
           alert("Oops..."+"\n"+"Item already exist")
           flag=true;
         }
