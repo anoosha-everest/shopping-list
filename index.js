@@ -79,7 +79,7 @@ function renderObjectList(object) {
                 li.textContent = object.getItem(); 
                 var span = document.createElement("span");
                 span.classList.add("close");
-                var timesSign = document.createTextNode("×");
+                var timesSign = document.createTextNode("X");
                 
                 li.addEventListener("click", function() {
                     let a=object.done_status;
