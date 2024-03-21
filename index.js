@@ -48,11 +48,21 @@ inputElement.addEventListener('keydown', function(event) {
        inp=inp.trim();
        if(inp.length==0){alert("Arey yaar..."  +"\n"+"Enter an item first😉");}
        else{
+        var flag=false;
+       for(let i=0;i<items.length;i++){
+        if(items[i].item==inp && items[i].del_status==false){
+          alert("Oops..."+"\n"+"Item already exist")
+          flag=true;
+        }
+       }
+       if(flag==false){
+        let itm=new Itemlist(inp);
+        items.push(itm);
+        renderObjectList(itm);
+       }
        document.getElementById("nameInput").value="";
        document.getElementById("nameInput").placeholder="New item...";
-       let itm=new Itemlist(inp);
-       items.push(itm);
-       renderObjectList(itm);
+       
        }
     }
 });
@@ -73,6 +83,10 @@ function renderObjectList(object) {
                     object.set_done_status(!a);
                     this.classList.toggle("marked");
                     updateCounts();
+                    var hide=document.getElementById('hide');
+                    if(hide.textContent=="show all items" && this.classList.contains("marked")){
+                      hideItems();
+                    }
                   });
                
                   span.addEventListener('click', function() {
